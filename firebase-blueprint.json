@@ -1,0 +1,120 @@
+{
+  "entities": {
+    "Complaint": {
+      "title": "Complaint",
+      "description": "A reported civic complaint with AI analysis and routing information",
+      "type": "object",
+      "properties": {
+        "complaintId": {
+          "type": "string",
+          "description": "Auto-generated Firestore document identifier"
+        },
+        "reportedBy": {
+          "type": "string",
+          "description": "The UID of the anonymously signed in user"
+        },
+        "description": {
+          "type": "string",
+          "description": "Narrative witness context"
+        },
+        "location": {
+          "type": "object",
+          "description": "Coordinates of the hazard"
+        },
+        "evidence": {
+          "type": "object",
+          "description": "URL link to evidence image"
+        },
+        "aiAnalysis": {
+          "type": "object",
+          "description": "Vision Agent analysis schema"
+        },
+        "routing": {
+          "type": "object",
+          "description": "Authority Routing Agent decision"
+        },
+        "status": {
+          "type": "string",
+          "description": "Ticket status"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Firestore server side timestamp"
+        }
+      },
+      "required": ["complaintId", "reportedBy", "description", "location", "evidence", "aiAnalysis", "routing", "status", "createdAt"]
+    },
+    "ResolutionVerification": {
+      "title": "ResolutionVerification",
+      "description": "AI verification of repaired civic complaints",
+      "type": "object",
+      "properties": {
+        "complaintId": {
+          "type": "string"
+        },
+        "beforeImage": {
+          "type": "string"
+        },
+        "afterImage": {
+          "type": "string"
+        },
+        "resolved": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["complaintId", "beforeImage", "afterImage", "resolved", "confidence", "reason", "verifiedAt"]
+    },
+    "AILog": {
+      "title": "AILog",
+      "description": "Raw execution log of an AI agent action",
+      "type": "object",
+      "properties": {
+        "agent": {
+          "type": "string"
+        },
+        "complaintId": {
+          "type": "string"
+        },
+        "input": {
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["agent", "complaintId", "output", "timestamp"]
+    }
+  },
+  "firestore": {
+    "complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Collection of all reported civic complaints"
+    },
+    "resolution_verification/{verificationId}": {
+      "schema": "ResolutionVerification",
+      "description": "Collection of all civic resolution verifications"
+    },
+    "ai_logs/{logId}": {
+      "schema": "AILog",
+      "description": "Collection of all AI agent execution logs"
+    }
+  }
+}

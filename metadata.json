@@ -1,0 +1,6 @@
+{
+  "name": "CivicAI Guardian",
+  "description": "Civic issue reporting web application powered by Gemini AI analysis.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
