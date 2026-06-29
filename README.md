@@ -93,7 +93,7 @@ The **Resolution Verification Agent** was adversarially tested with deliberately
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/civicai-guardian.git
+git clone https:https://github.com/hk0301050-debug/CivicAi-Guardian
 cd civicai-guardian
 
 # 2. Install dependencies
