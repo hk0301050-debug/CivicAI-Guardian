@@ -4,8 +4,9 @@
 
 Built solo for the **Vibe2Ship Hackathon** (Coding Ninjas × Google for Developers) — *Community Hero: Hyperlocal Problem Solver* track.
 
-🔗 **Live App:** [civicai-guardian-8964...run.app](https://civicai-guardian-8964...run.app) *(replace with your deployed link)*
-📄 **Project Description:** [Google Doc link] *(replace with your doc link)*
+🔗 **Live App:** https://civicai-guardian-896498788593.asia-southeast1.run.app
+
+📄 **Project Description:** https://docs.google.com/document/d/19A2TMGVnewzitbxcbOsJvalXGGtvsq7TCR7s4q1MBDI/edit?usp=sharing
 
 ---
 
